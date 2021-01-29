@@ -13,9 +13,15 @@
 
 # Hint: The next number is found by adding the two numbers before it
 
-term = 0 
-fib = 0
-acc = 0
-
+term = 0
+x = 0
+y = 1
 while term <= 50:
-  print(f'term: {term} / number: {fib}')
+  if term <= 1:
+    print(f'term: {term} / number: {term}')
+  else:
+    num = x + y
+    print(f'term: {term} / number: {num}')
+    x = y
+    y = num
+  term += 1
